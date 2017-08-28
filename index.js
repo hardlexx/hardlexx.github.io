@@ -134,9 +134,8 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.instance = new lib.Символ1();
 	this.instance.parent = this;
 	this.instance.setTransform(120.8,241.8,1,1,0,0,0,121.5,163.6);
-	new cjs.ButtonHelper(this.instance, 0, 1, 1);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(41).to({y:269.6},0).wait(1).to({y:297.5},0).wait(1).to({y:325.4},0).wait(1).to({y:353.3},0).wait(1).to({y:381.2},0).wait(1).to({y:409.1},0).wait(1).to({y:437},0).wait(1).to({y:464.8},0).wait(1).to({y:492.7},0).wait(1).to({y:520.6},0).wait(1).to({y:548.5},0).wait(1).to({y:576.4},0).to({_off:true},1).wait(156));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(41).to({y:269.6},0).wait(1).to({y:297.5},0).wait(1).to({y:325.4},0).wait(1).to({y:353.3},0).wait(1).to({y:381.2},0).wait(1).to({y:409.1},0).wait(1).to({y:437},0).wait(1).to({y:464.8},0).wait(1).to({y:492.7},0).wait(1).to({y:520.6},0).wait(1).to({y:548.5},0).to({_off:true},1).wait(157));
 
 	// Кадр 2
 	this.shape_20 = new cjs.Shape();
@@ -189,12 +188,11 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 
 	this.instance_1 = new lib.Символ1();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(120.8,569.9,1,1,0,0,0,121.5,163.6);
+	this.instance_1.setTransform(120.8,528.5,1,1,0,0,0,121.5,163.6);
 	this.instance_1._off = true;
-	new cjs.ButtonHelper(this.instance_1, 0, 1, 1);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_20}]}).to({state:[{t:this.shape_20}]},40).to({state:[{t:this.shape_23},{t:this.shape_22},{t:this.shape_21}]},47).to({state:[{t:this.shape_26},{t:this.shape_25,p:{x:217.1}},{t:this.shape_24,p:{x:23}}]},1).to({state:[{t:this.shape_26},{t:this.shape_28,p:{x:228.6}},{t:this.shape_27,p:{x:11.5}}]},1).to({state:[{t:this.shape_26},{t:this.shape_29},{t:this.shape_27,p:{x:0}}]},1).to({state:[{t:this.shape_26},{t:this.shape_30},{t:this.shape_24,p:{x:-17.2}}]},1).to({state:[{t:this.shape_26},{t:this.shape_28,p:{x:274.6}},{t:this.shape_24,p:{x:-34.5}}]},1).to({state:[{t:this.shape_26},{t:this.shape_25,p:{x:289.1}},{t:this.shape_24,p:{x:-49}}]},1).to({state:[]},1).to({state:[{t:this.shape_31}]},41).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.instance_1}]},10).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).wait(12));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(188).to({_off:false},0).wait(1).to({y:528.5},0).wait(1).to({y:487},0).wait(1).to({y:445.5},0).wait(1).to({y:404.1},0).wait(1).to({y:362.6},0).wait(1).to({y:321.1},0).wait(1).to({y:279.6},0).wait(1).to({y:238.2},0).wait(1).to({y:241.8},0).wait(12));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_20}]}).to({state:[{t:this.shape_20}]},40).to({state:[{t:this.shape_23},{t:this.shape_22},{t:this.shape_21}]},47).to({state:[{t:this.shape_26},{t:this.shape_25,p:{x:217.1}},{t:this.shape_24,p:{x:23}}]},1).to({state:[{t:this.shape_26},{t:this.shape_28,p:{x:228.6}},{t:this.shape_27,p:{x:11.5}}]},1).to({state:[{t:this.shape_26},{t:this.shape_29},{t:this.shape_27,p:{x:0}}]},1).to({state:[{t:this.shape_26},{t:this.shape_30},{t:this.shape_24,p:{x:-17.2}}]},1).to({state:[{t:this.shape_26},{t:this.shape_28,p:{x:274.6}},{t:this.shape_24,p:{x:-34.5}}]},1).to({state:[{t:this.shape_26},{t:this.shape_25,p:{x:289.1}},{t:this.shape_24,p:{x:-49}}]},1).to({state:[]},1).to({state:[{t:this.shape_31}]},41).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.instance_1}]},11).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).wait(12));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(189).to({_off:false},0).wait(1).to({y:487},0).wait(1).to({y:445.5},0).wait(1).to({y:404.1},0).wait(1).to({y:362.6},0).wait(1).to({y:321.1},0).wait(1).to({y:279.6},0).wait(1).to({y:238.2},0).wait(1).to({y:241.8},0).wait(12));
 
 	// Кадр 4
 	this.shape_32 = new cjs.Shape();
@@ -306,7 +304,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/kububanner240raskadr.jpg?1503942138892", id:"kububanner240raskadr"}
+		{src:"images/kububanner240raskadr.jpg?1503942618122", id:"kububanner240raskadr"}
 	],
 	preloads: []
 };
