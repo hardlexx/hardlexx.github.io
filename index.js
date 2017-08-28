@@ -128,14 +128,14 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.shape_19.graphics.f("#EC1D2C").s().p("AgtA5QgVAAAAgPQAAgPAVAAIAhAAIAAg1IghAAQgVAAAAgPQAAgPAVAAIBaAAQAWAAAAAPQAAAPgWAAIgeAAIAAA1IAeAAQAWAAAAAPQAAAPgWAAg");
 	this.shape_19.setTransform(215.5,94.8);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_9},{t:this.shape_8},{t:this.shape_7},{t:this.shape_6},{t:this.shape_5},{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape}]},52).to({state:[]},34).to({state:[{t:this.shape_19},{t:this.shape_18},{t:this.shape_17},{t:this.shape_16},{t:this.shape_15},{t:this.shape_14},{t:this.shape_13},{t:this.shape_12},{t:this.shape_11},{t:this.shape_10}]},8).to({state:[]},29).wait(86));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_9},{t:this.shape_8},{t:this.shape_7},{t:this.shape_6},{t:this.shape_5},{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape}]},52).to({state:[]},45).to({state:[{t:this.shape_19},{t:this.shape_18},{t:this.shape_17},{t:this.shape_16},{t:this.shape_15},{t:this.shape_14},{t:this.shape_13},{t:this.shape_12},{t:this.shape_11},{t:this.shape_10}]},8).to({state:[]},29).wait(82));
 
 	// Када 1
 	this.instance = new lib.Символ1();
 	this.instance.parent = this;
 	this.instance.setTransform(120.8,241.8,1,1,0,0,0,121.5,163.6);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(41).to({y:269.6},0).wait(1).to({y:297.5},0).wait(1).to({y:325.4},0).wait(1).to({y:353.3},0).wait(1).to({y:381.2},0).wait(1).to({y:409.1},0).wait(1).to({y:437},0).wait(1).to({y:464.8},0).wait(1).to({y:492.7},0).wait(1).to({y:520.6},0).wait(1).to({y:548.5},0).to({_off:true},1).wait(157));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(41).to({y:269.6},0).wait(1).to({y:297.5},0).wait(1).to({y:325.4},0).wait(1).to({y:353.3},0).wait(1).to({y:381.2},0).wait(1).to({y:409.1},0).wait(1).to({y:437},0).wait(1).to({y:464.8},0).wait(1).to({y:492.7},0).wait(1).to({y:520.6},0).wait(1).to({y:548.5},0).to({_off:true},1).wait(164));
 
 	// Кадр 2
 	this.shape_20 = new cjs.Shape();
@@ -191,8 +191,8 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.instance_1.setTransform(120.8,528.5,1,1,0,0,0,121.5,163.6);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_20}]}).to({state:[{t:this.shape_20}]},40).to({state:[{t:this.shape_23},{t:this.shape_22},{t:this.shape_21}]},47).to({state:[{t:this.shape_26},{t:this.shape_25,p:{x:217.1}},{t:this.shape_24,p:{x:23}}]},1).to({state:[{t:this.shape_26},{t:this.shape_28,p:{x:228.6}},{t:this.shape_27,p:{x:11.5}}]},1).to({state:[{t:this.shape_26},{t:this.shape_29},{t:this.shape_27,p:{x:0}}]},1).to({state:[{t:this.shape_26},{t:this.shape_30},{t:this.shape_24,p:{x:-17.2}}]},1).to({state:[{t:this.shape_26},{t:this.shape_28,p:{x:274.6}},{t:this.shape_24,p:{x:-34.5}}]},1).to({state:[{t:this.shape_26},{t:this.shape_25,p:{x:289.1}},{t:this.shape_24,p:{x:-49}}]},1).to({state:[]},1).to({state:[{t:this.shape_31}]},41).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.instance_1}]},11).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).wait(12));
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(189).to({_off:false},0).wait(1).to({y:487},0).wait(1).to({y:445.5},0).wait(1).to({y:404.1},0).wait(1).to({y:362.6},0).wait(1).to({y:321.1},0).wait(1).to({y:279.6},0).wait(1).to({y:238.2},0).wait(1).to({y:241.8},0).wait(12));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_20}]}).to({state:[{t:this.shape_20}]},40).to({state:[{t:this.shape_23},{t:this.shape_22},{t:this.shape_21}]},58).to({state:[{t:this.shape_26},{t:this.shape_25,p:{x:217.1}},{t:this.shape_24,p:{x:23}}]},1).to({state:[{t:this.shape_26},{t:this.shape_28,p:{x:228.6}},{t:this.shape_27,p:{x:11.5}}]},1).to({state:[{t:this.shape_26},{t:this.shape_29},{t:this.shape_27,p:{x:0}}]},1).to({state:[{t:this.shape_26},{t:this.shape_30},{t:this.shape_24,p:{x:-17.2}}]},1).to({state:[{t:this.shape_26},{t:this.shape_28,p:{x:274.6}},{t:this.shape_24,p:{x:-34.5}}]},1).to({state:[{t:this.shape_26},{t:this.shape_25,p:{x:289.1}},{t:this.shape_24,p:{x:-49}}]},1).to({state:[]},1).to({state:[{t:this.shape_31}]},41).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.shape_31}]},9).to({state:[]},4).to({state:[{t:this.instance_1}]},11).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_1}]},1).wait(8));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(200).to({_off:false},0).wait(1).to({y:487},0).wait(1).to({y:445.5},0).wait(1).to({y:404.1},0).wait(1).to({y:362.6},0).wait(1).to({y:321.1},0).wait(1).to({y:279.6},0).wait(1).to({y:238.2},0).wait(1).to({y:241.8},0).wait(8));
 
 	// Кадр 4
 	this.shape_32 = new cjs.Shape();
@@ -220,8 +220,8 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.shape_37.graphics.bf(img.kububanner240raskadr, null, new cjs.Matrix2D(1.03,0,0,1.03,-422.1,-245.2)).s().p("EgTiAiiMAAAhFDMAnFAAAMAAABFDg");
 	this.shape_37.setTransform(120.3,209.5);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_32}]},124).to({state:[{t:this.shape_32}]},2).to({state:[{t:this.shape_32}]},2).to({state:[{t:this.shape_32}]},2).to({state:[{t:this.shape_34},{t:this.shape_33}]},1).to({state:[{t:this.shape_34},{t:this.shape_33}]},58).to({state:[{t:this.shape_36},{t:this.shape_33},{t:this.shape_35,p:{y:263.4}}]},5).to({state:[{t:this.shape_36},{t:this.shape_33},{t:this.shape_35,p:{y:271.8}}]},1).to({state:[{t:this.shape_36},{t:this.shape_33},{t:this.shape_35,p:{y:277.4}}]},1).to({state:[{t:this.shape_36},{t:this.shape_33}]},1).to({state:[{t:this.shape_37}]},1).wait(11));
-	this.timeline.addTween(cjs.Tween.get(this.shape_32).wait(124).to({_off:false},0).wait(2).to({y:428.7},0).wait(2).to({y:407.3},0).wait(2).to({_off:true},1).wait(78));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_32}]},135).to({state:[{t:this.shape_32}]},2).to({state:[{t:this.shape_32}]},2).to({state:[{t:this.shape_32}]},2).to({state:[{t:this.shape_34},{t:this.shape_33}]},1).to({state:[{t:this.shape_34},{t:this.shape_33}]},58).to({state:[{t:this.shape_36},{t:this.shape_33},{t:this.shape_35,p:{y:263.4}}]},5).to({state:[{t:this.shape_36},{t:this.shape_33},{t:this.shape_35,p:{y:271.8}}]},1).to({state:[{t:this.shape_36},{t:this.shape_33},{t:this.shape_35,p:{y:277.4}}]},1).to({state:[{t:this.shape_36},{t:this.shape_33}]},1).to({state:[{t:this.shape_37}]},1).wait(7));
+	this.timeline.addTween(cjs.Tween.get(this.shape_32).wait(135).to({_off:false},0).wait(2).to({y:428.7},0).wait(2).to({y:407.3},0).wait(2).to({_off:true},1).wait(74));
 
 	// Кадр 3
 	this.shape_38 = new cjs.Shape();
@@ -292,7 +292,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.shape_54.graphics.bf(img.kububanner240raskadr, null, new cjs.Matrix2D(1.03,0,0,1.03,-690.3,-136.8)).s().p("AUgCVIAAhEMgpSAAAIAAjkIA9AAIAAAlMAnFAAAIAAglIBjAAIAAEog");
 	this.shape_54.setTransform(122.1,99.7);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_38}]},87).to({state:[{t:this.shape_39}]},1).to({state:[{t:this.shape_40}]},1).to({state:[{t:this.shape_41}]},1).to({state:[{t:this.shape_42}]},1).to({state:[{t:this.shape_42}]},1).to({state:[{t:this.shape_44},{t:this.shape_43}]},2).to({state:[{t:this.shape_43},{t:this.shape_44}]},30).to({state:[{t:this.shape_43},{t:this.shape_46},{t:this.shape_45,p:{y:265.5}}]},2).to({state:[{t:this.shape_43},{t:this.shape_48},{t:this.shape_47},{t:this.shape_45,p:{y:257.7}}]},2).to({state:[{t:this.shape_43},{t:this.shape_50},{t:this.shape_49}]},2).to({state:[]},1).to({state:[{t:this.shape_52},{t:this.shape_51}]},63).to({state:[{t:this.shape_52},{t:this.shape_51}]},1).to({state:[{t:this.shape_52},{t:this.shape_51}]},1).to({state:[{t:this.shape_54},{t:this.shape_53}]},1).to({state:[]},1).wait(11));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.shape_38}]},98).to({state:[{t:this.shape_39}]},1).to({state:[{t:this.shape_40}]},1).to({state:[{t:this.shape_41}]},1).to({state:[{t:this.shape_42}]},1).to({state:[{t:this.shape_42}]},1).to({state:[{t:this.shape_44},{t:this.shape_43}]},2).to({state:[{t:this.shape_43},{t:this.shape_44}]},30).to({state:[{t:this.shape_43},{t:this.shape_46},{t:this.shape_45,p:{y:265.5}}]},2).to({state:[{t:this.shape_43},{t:this.shape_48},{t:this.shape_47},{t:this.shape_45,p:{y:257.7}}]},2).to({state:[{t:this.shape_43},{t:this.shape_50},{t:this.shape_49}]},2).to({state:[]},1).to({state:[{t:this.shape_52},{t:this.shape_51}]},63).to({state:[{t:this.shape_52},{t:this.shape_51}]},1).to({state:[{t:this.shape_52},{t:this.shape_51}]},1).to({state:[{t:this.shape_54},{t:this.shape_53}]},1).to({state:[]},1).wait(7));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(115.2,188.5,250.2,442);
@@ -304,7 +304,7 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/kububanner240raskadr.jpg?1503942618122", id:"kububanner240raskadr"}
+		{src:"images/kububanner240raskadr.jpg?1503943254497", id:"kububanner240raskadr"}
 	],
 	preloads: []
 };
