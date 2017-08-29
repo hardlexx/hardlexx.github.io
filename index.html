@@ -22,21 +22,17 @@
   }
 </style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="index.js?1503943254499"></script>
+<script src="index.js"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	images = images||{};
 	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", handleFileLoad);
+	loader.installPlugin(createjs.Sound);
 	loader.addEventListener("complete", handleComplete);
 	loader.loadManifest(lib.properties.manifest);
-}
-function handleFileLoad(evt) {	
-	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }	
 }
 function handleComplete(evt) {
 	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
@@ -45,13 +41,34 @@ function handleComplete(evt) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.ВерсияСлайдерbackup();
+	exportRoot = new lib.Полигон_Game();
 	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);	
+	stage.addChild(exportRoot);
+	stage.enableMouseOver();	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
 		createjs.Ticker.setFPS(lib.properties.fps);
-		createjs.Ticker.addEventListener("tick", stage);
+		createjs.Ticker.addEventListener("tick", handleTick)
+		function handleTick(event) {
+			var cameraInstance = exportRoot.___camera___instance;
+			if(cameraInstance)
+			{
+				if(cameraInstance._off != null && cameraInstance._off == true)
+					exportRoot.transformMatrix = new createjs.Matrix2D();
+				else
+				{
+					var mat = cameraInstance.getMatrix();
+					var stageCenter = { 'x' : lib.properties.width/2, 'y' : lib.properties.height/2 };
+					mat.tx -= stageCenter.x;
+					mat.ty -= stageCenter.y;
+					var inverseMat = mat.invert();
+					inverseMat.prependTransform(stageCenter.x, stageCenter.y, 1, 1, 0, 0, 0, 0, 0);
+					inverseMat.appendTransform(-stageCenter.x, -stageCenter.y, 1, 1, 0, 0, 0, 0, 0);
+					exportRoot.transformMatrix = inverseMat;
+				}
+			}
+			stage.update();
+		}
 	}	    
 	//Code to support hidpi screens and responsive scaling.
 	function makeResponsive(isResp, respDim, isScale, scaleType) {		
@@ -89,13 +106,16 @@ function handleComplete(evt) {
 	makeResponsive(true,'both',false,1);	
 	fnStartAnimation();
 }
+function playSound(id, loop) {
+	return createjs.Sound.play(id, createjs.Sound.INTERRUPT_EARLY, 0, 0, loop);
+}
 </script>
 <!-- write your code here -->
 </head>
 <body onload="init();" style="margin:0px;">
-	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:240px; height:400px">
-		<canvas id="canvas" width="240" height="400" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
-		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:240px; height:400px; position: absolute; left: 0px; top: 0px; display: block;">
+	<div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:853px; height:480px">
+		<canvas id="canvas" width="853" height="480" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1.00);"></canvas>
+		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:853px; height:480px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
 </body>
