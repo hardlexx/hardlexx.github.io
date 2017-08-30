@@ -69,16 +69,16 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 
 
 
-(lib._13ecfc9c1c42811c1ac067e83775bdd5 = function() {
-	this.initialize(img._13ecfc9c1c42811c1ac067e83775bdd5);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1280,718);
-
-
 (lib._849038267aa724ed8a6075af43ebd29c = function() {
 	this.initialize(img._849038267aa724ed8a6075af43ebd29c);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,736,413);
+
+
+(lib.ghjghjgh = function() {
+	this.initialize(img.ghjghjgh);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,1280,718);
 
 
 (lib.IMG_3342 = function() {
@@ -857,7 +857,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,364.5,192.6);
 	this.instance.parent = this;
 	this.instance.setTransform(113,328,0.534,0.534);
 
-	this.instance_1 = new lib._13ecfc9c1c42811c1ac067e83775bdd5();
+	this.instance_1 = new lib.ghjghjgh();
 	this.instance_1.parent = this;
 	this.instance_1.setTransform(119,335,0.95,0.95);
 
@@ -886,8 +886,8 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images_page/_13ecfc9c1c42811c1ac067e83775bdd5.jpg", id:"_13ecfc9c1c42811c1ac067e83775bdd5"},
 		{src:"images_page/_849038267aa724ed8a6075af43ebd29c.jpg", id:"_849038267aa724ed8a6075af43ebd29c"},
+		{src:"images_page/ghjghjgh.jpg", id:"ghjghjgh"},
 		{src:"images_page/IMG_3342.jpg", id:"IMG_3342"}
 	],
 	preloads: []
