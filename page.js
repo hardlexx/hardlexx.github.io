@@ -6,7 +6,9 @@ var loadedTypekitCount = 0;
 var loadedGoogleCount = 0;
 var gFontsUpdateCacheList = [];
 var tFontsUpdateCacheList = [];
-lib.ssMetadata = [];
+lib.ssMetadata = [
+		{name:"page_atlas_", frames: [[1282,1282,736,413],[0,1282,1280,718],[0,0,1920,1280]]}
+];
 
 
 
@@ -70,21 +72,24 @@ lib.tfontAvailable = function(family, totalTypekitCount) {
 
 
 (lib._849038267aa724ed8a6075af43ebd29c = function() {
-	this.initialize(img._849038267aa724ed8a6075af43ebd29c);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,736,413);
+	this.spriteSheet = ss["page_atlas_"];
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.ghjghjgh = function() {
-	this.initialize(img.ghjghjgh);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1280,718);
+	this.spriteSheet = ss["page_atlas_"];
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.IMG_3342 = function() {
-	this.initialize(img.IMG_3342);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1920,1280);
+	this.spriteSheet = ss["page_atlas_"];
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.стр3 = function(mode,startPosition,loop) {
@@ -853,19 +858,19 @@ p.nominalBounds = new cjs.Rectangle(0,0,364.5,192.6);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_14},{t:this.shape_13},{t:this.shape_12},{t:this.shape_11},{t:this.shape_10},{t:this.shape_9},{t:this.shape_8},{t:this.shape_7},{t:this.shape_6},{t:this.shape_5},{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape},{t:this.button_3},{t:this.button_4}]}).to({state:[{t:this.button_2},{t:this.shape_32},{t:this.shape_31},{t:this.shape_30},{t:this.shape_29},{t:this.shape_28},{t:this.shape_27},{t:this.shape_26},{t:this.shape_25},{t:this.shape_24},{t:this.shape_23},{t:this.shape_22},{t:this.shape_21},{t:this.shape_20},{t:this.shape_19},{t:this.shape_18},{t:this.shape_17},{t:this.shape_16},{t:this.shape_15},{t:this.button_4}]},6).to({state:[{t:this.button_2},{t:this.button_3},{t:this.shape_46},{t:this.shape_45},{t:this.shape_44},{t:this.shape_43},{t:this.shape_42},{t:this.shape_41},{t:this.shape_40},{t:this.shape_39},{t:this.shape_38},{t:this.shape_37},{t:this.shape_36},{t:this.shape_35},{t:this.shape_34},{t:this.shape_33}]},6).wait(6));
 
 	// содержимое
-	this.instance = new lib.IMG_3342();
-	this.instance.parent = this;
-	this.instance.setTransform(113,328,0.534,0.534);
+	this.shape_47 = new cjs.Shape();
+	this.shape_47.graphics.bf(cjs.SpriteSheetUtils.extractFrame(ss["page_atlas_"],2), null, new cjs.Matrix2D(0.534,0,0,0.534,-513,-342)).s().p("EhQJA1cMAAAhq3MCgTAAAMAAABq3g");
+	this.shape_47.setTransform(626,670);
 
-	this.instance_1 = new lib.ghjghjgh();
-	this.instance_1.parent = this;
-	this.instance_1.setTransform(119,335,0.95,0.95);
+	this.shape_48 = new cjs.Shape();
+	this.shape_48.graphics.bf(cjs.SpriteSheetUtils.extractFrame(ss["page_atlas_"],1), null, new cjs.Matrix2D(0.95,0,0,0.95,-608.2,-341.1)).s().p("EhfBA1TMAAAhqmMC+DAAAMAAABqmg");
+	this.shape_48.setTransform(727.2,676.2);
 
-	this.instance_2 = new lib._849038267aa724ed8a6075af43ebd29c();
-	this.instance_2.parent = this;
-	this.instance_2.setTransform(117,335,1.651,1.651);
+	this.shape_49 = new cjs.Shape();
+	this.shape_49.graphics.bf(cjs.SpriteSheetUtils.extractFrame(ss["page_atlas_"],0), null, new cjs.Matrix2D(1.651,0,0,1.651,-607.6,-340.9)).s().p("Ehe7A1SMAAAhqjMC93AAAMAAABqjg");
+	this.shape_49.setTransform(724.6,676);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},6).to({state:[{t:this.instance_2}]},6).wait(6));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_47}]}).to({state:[{t:this.shape_48}]},6).to({state:[{t:this.shape_49}]},6).wait(6));
 
 	// внешняя ссылка
 	this.button_6 = new lib.Краснаякнопка();
@@ -886,9 +891,7 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images_page/_849038267aa724ed8a6075af43ebd29c.jpg", id:"_849038267aa724ed8a6075af43ebd29c"},
-		{src:"images_page/ghjghjgh.jpg", id:"ghjghjgh"},
-		{src:"images_page/IMG_3342.jpg", id:"IMG_3342"}
+		{src:"images_page/page_atlas_.jpg", id:"page_atlas_"}
 	],
 	preloads: []
 };
