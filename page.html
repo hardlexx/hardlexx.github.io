@@ -22,7 +22,7 @@
   }
 </style>
 <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-<script src="page.js?1504084490190"></script>
+<script src="page.js"></script>
 <script>
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -91,7 +91,7 @@ function handleComplete(evt) {
 			lastW = iw; lastH = ih; lastS = sRatio;		
 		}
 	}
-	makeResponsive(true,'both',true,1);	
+	makeResponsive(true,'width',true,1);	
 	fnStartAnimation();
 }
 </script>
@@ -103,6 +103,6 @@ function handleComplete(evt) {
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1920px; height:1080px; position: absolute; left: 0px; top: 0px; display: none;">
 		</div>
 	</div>
-    <div id='_preload_div_' style='display: inline-block; height:1080px; width: 1920px; vertical-align=middle;position:absolute;left:0px;top:0px;text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images_page/_preloader.gif?1504084490191 style='vertical-align: middle; max-height: 100%'/></div>
+    <div id='_preload_div_' style='display: inline-block; height:1080px; width: 1920px; vertical-align=middle;position:absolute;left:0px;top:0px;text-align: center;'>	<span style='display: inline-block; height: 100%; vertical-align: middle;'></span>	<img src=images_page/_preloader.gif style='vertical-align: middle; max-height: 100%'/></div>
 </body>
 </html>
