@@ -14,41 +14,6 @@ lib.ssMetadata = [];
 p.nominalBounds = new cjs.Rectangle(0,0,1280,718);
 
 
-(lib.IMG_3342 = function() {
-	this.initialize(img.IMG_3342);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1920,1280);// helper functions:
-
-function mc_symbol_clone() {
-	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
-	clone.gotoAndStop(this.currentFrame);
-	clone.paused = this.paused;
-	clone.framerate = this.framerate;
-	return clone;
-}
-
-function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
-	var prototype = cjs.extend(symbol, cjs.MovieClip);
-	prototype.clone = mc_symbol_clone;
-	prototype.nominalBounds = nominalBounds;
-	prototype.frameBounds = frameBounds;
-	return prototype;
-	}
-
-
-(lib.img_1 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Слой 1
-	this.shape = new cjs.Shape();
-	this.shape.graphics.bf(img.IMG_3342, null, new cjs.Matrix2D(0.534,0,0,0.534,-513,-342)).s().p("EhQJA1cMAAAhq3MCgTAAAMAAABq3g");
-	this.shape.setTransform(513,342);
-
-	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
-
-}).prototype = getMCSymbolPrototype(lib.img_1, new cjs.Rectangle(0,0,1026,684), null);
-
-
 (lib.стр3 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -473,6 +438,23 @@ p.nominalBounds = new cjs.Rectangle(-5.5,0,571.1,232);
 p.nominalBounds = new cjs.Rectangle(0,0,396.4,220.9);
 
 
+(lib.an_Video = function(options) {
+	this._element = new $.an.Video(options);
+	this._el = this._element.create();
+	var $this = this;
+	this.addEventListener('added', function() {
+		$this._lastAddedFrame = $this.parent.currentFrame;
+		$this._element.attach($('#dom_overlay_container'));
+	});
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(0,0,400,300);
+
+p._tick = _tick;
+p._handleDrawEnd = _handleDrawEnd;
+p._updateVisibility = _updateVisibility;
+
+
+
 (lib.Краснаякнопка = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
@@ -809,9 +791,9 @@ p.nominalBounds = new cjs.Rectangle(0,0,364.5,192.6);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_14},{t:this.shape_13},{t:this.shape_12},{t:this.shape_11},{t:this.shape_10},{t:this.shape_9},{t:this.shape_8},{t:this.shape_7},{t:this.shape_6},{t:this.shape_5},{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape},{t:this.button_3},{t:this.button_4}]}).to({state:[{t:this.button_2},{t:this.shape_32},{t:this.shape_31},{t:this.shape_30},{t:this.shape_29},{t:this.shape_28},{t:this.shape_27},{t:this.shape_26},{t:this.shape_25},{t:this.shape_24},{t:this.shape_23},{t:this.shape_22},{t:this.shape_21},{t:this.shape_20},{t:this.shape_19},{t:this.shape_18},{t:this.shape_17},{t:this.shape_16},{t:this.shape_15},{t:this.button_4}]},6).to({state:[{t:this.button_2},{t:this.button_3},{t:this.shape_46},{t:this.shape_45},{t:this.shape_44},{t:this.shape_43},{t:this.shape_42},{t:this.shape_41},{t:this.shape_40},{t:this.shape_39},{t:this.shape_38},{t:this.shape_37},{t:this.shape_36},{t:this.shape_35},{t:this.shape_34},{t:this.shape_33}]},6).wait(6));
 
 	// содержимое
-	this.instance = new lib.img_1();
-	this.instance.parent = this;
-	this.instance.setTransform(629.8,665.9,1,1,0,0,0,513,341.9);
+	this.instance = new lib.an_Video({'id': '', 'src':'videos/1.mp4', 'autoplay':false, 'controls':true, 'muted':false, 'loop':true, 'poster':'images_page/', 'preload':false, 'class':'video'});
+
+	this.instance.setTransform(175.1,1043,3.054,2.29,0,0,0,19.1,308);
 
 	this.shape_47 = new cjs.Shape();
 	this.shape_47.graphics.bf(img.ghjghjgh, null, new cjs.Matrix2D(0.95,0,0,0.95,-608.2,-341.1)).s().p("EhfBA1TMAAAhqmMC+DAAAMAAABqmg");
@@ -842,13 +824,44 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images_page/ghjghjgh.jpg?1504799647314", id:"ghjghjgh"},
-		{src:"images_page/IMG_3342.jpg?1504799647314", id:"IMG_3342"}
+		{src:"images_page/ghjghjgh.jpg?1504800321088", id:"ghjghjgh"},
+		{src:"https://code.jquery.com/jquery-2.2.4.min.js?1504800321089", id:"lib/jquery-2.2.4.min.js"},
+		{src:"components/sdk/anwidget.js?1504800321089", id:"sdk/anwidget.js"},
+		{src:"components/video/src/video.js?1504800321089", id:"an.Video"}
 	],
 	preloads: []
 };
 
 
+function _updateVisibility(evt) {
+	if((this.getStage() == null || this._off || this._lastAddedFrame != this.parent.currentFrame) && this._element) {
+		this._element.detach();
+		stage.removeEventListener('drawstart', this._updateVisibilityCbk);
+		this._updateVisibilityCbk = false;
+	}
+}
+function _handleDrawEnd(evt) {
+	var props = this.getConcatenatedDisplayProps(this._props), mat = props.matrix;
+	var tx1 = mat.decompose(); var sx = tx1.scaleX; var sy = tx1.scaleY;
+	var dp = window.devicePixelRatio || 1; var w = this.nominalBounds.width * sx; var h = this.nominalBounds.height * sy;
+	mat.tx/=dp;mat.ty/=dp; mat.a/=(dp*sx);mat.b/=(dp*sx);mat.c/=(dp*sy);mat.d/=(dp*sy);
+	this._element.setProperty('transform-origin', this.regX + 'px ' + this.regY + 'px');
+	var x = (mat.tx + this.regX*mat.a + this.regY*mat.c - this.regX);
+	var y = (mat.ty + this.regX*mat.b + this.regY*mat.d - this.regY);
+	var tx = 'matrix(' + mat.a + ',' + mat.b + ',' + mat.c + ',' + mat.d + ',' + x + ',' + y + ')';
+	this._element.setProperty('transform', tx);
+	this._element.setProperty('width', w);
+	this._element.setProperty('height', h);
+	this._element.update();
+}
+
+function _tick(evt) {
+	var stage = this.getStage();
+	stage&&stage.on('drawend', this._handleDrawEnd, this, true);
+	if(!this._updateVisibilityCbk) {
+		this._updateVisibilityCbk = stage.on('drawstart', this._updateVisibility, this, false);
+	}
+}
 
 
 })(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{}, AdobeAn = AdobeAn||{});
