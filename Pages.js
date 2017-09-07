@@ -17,7 +17,36 @@ p.nominalBounds = new cjs.Rectangle(0,0,1280,718);
 (lib.IMG_3342 = function() {
 	this.initialize(img.IMG_3342);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1920,1280);
+p.nominalBounds = new cjs.Rectangle(0,0,1920,1280);// helper functions:
+
+function mc_symbol_clone() {
+	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
+	clone.gotoAndStop(this.currentFrame);
+	clone.paused = this.paused;
+	clone.framerate = this.framerate;
+	return clone;
+}
+
+function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
+	var prototype = cjs.extend(symbol, cjs.MovieClip);
+	prototype.clone = mc_symbol_clone;
+	prototype.nominalBounds = nominalBounds;
+	prototype.frameBounds = frameBounds;
+	return prototype;
+	}
+
+
+(lib.img_1 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.bf(img.IMG_3342, null, new cjs.Matrix2D(0.534,0,0,0.534,-513,-342)).s().p("EhQJA1cMAAAhq3MCgTAAAMAAABq3g");
+	this.shape.setTransform(513,342);
+
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+
+}).prototype = getMCSymbolPrototype(lib.img_1, new cjs.Rectangle(0,0,1026,684), null);
 
 
 (lib.стр3 = function(mode,startPosition,loop) {
@@ -568,11 +597,6 @@ p.nominalBounds = new cjs.Rectangle(0,0,364.5,192.6);
 		1. Замените http://www.adobe.com на адрес желаемой веб-страницы.
 		   Не удаляйте кавычки ("").
 		*/
-		this.button_6.addEventListener("click", fl_ClickToGoToWebPage);
-		
-		function fl_ClickToGoToWebPage() {
-			window.open("index.html");
-		}
 	}
 
 	// actions tween:
@@ -785,20 +809,20 @@ p.nominalBounds = new cjs.Rectangle(0,0,364.5,192.6);
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_14},{t:this.shape_13},{t:this.shape_12},{t:this.shape_11},{t:this.shape_10},{t:this.shape_9},{t:this.shape_8},{t:this.shape_7},{t:this.shape_6},{t:this.shape_5},{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape},{t:this.button_3},{t:this.button_4}]}).to({state:[{t:this.button_2},{t:this.shape_32},{t:this.shape_31},{t:this.shape_30},{t:this.shape_29},{t:this.shape_28},{t:this.shape_27},{t:this.shape_26},{t:this.shape_25},{t:this.shape_24},{t:this.shape_23},{t:this.shape_22},{t:this.shape_21},{t:this.shape_20},{t:this.shape_19},{t:this.shape_18},{t:this.shape_17},{t:this.shape_16},{t:this.shape_15},{t:this.button_4}]},6).to({state:[{t:this.button_2},{t:this.button_3},{t:this.shape_46},{t:this.shape_45},{t:this.shape_44},{t:this.shape_43},{t:this.shape_42},{t:this.shape_41},{t:this.shape_40},{t:this.shape_39},{t:this.shape_38},{t:this.shape_37},{t:this.shape_36},{t:this.shape_35},{t:this.shape_34},{t:this.shape_33}]},6).wait(6));
 
 	// содержимое
-	this.shape_47 = new cjs.Shape();
-	this.shape_47.graphics.bf(img.IMG_3342, null, new cjs.Matrix2D(0.534,0,0,0.534,-513,-342)).s().p("EhQJA1cMAAAhq3MCgTAAAMAAABq3g");
-	this.shape_47.setTransform(629.8,666);
+	this.instance = new lib.img_1();
+	this.instance.parent = this;
+	this.instance.setTransform(629.8,665.9,1,1,0,0,0,513,341.9);
 
-	this.shape_48 = new cjs.Shape();
-	this.shape_48.graphics.bf(img.ghjghjgh, null, new cjs.Matrix2D(0.95,0,0,0.95,-608.2,-341.1)).s().p("EhfBA1TMAAAhqmMC+DAAAMAAABqmg");
-	this.shape_48.setTransform(699.5,680.9);
+	this.shape_47 = new cjs.Shape();
+	this.shape_47.graphics.bf(img.ghjghjgh, null, new cjs.Matrix2D(0.95,0,0,0.95,-608.2,-341.1)).s().p("EhfBA1TMAAAhqmMC+DAAAMAAABqmg");
+	this.shape_47.setTransform(699.5,680.9);
 
 	this.text = new cjs.Text("Что такое JavaScript?\n\nJavaScript изначально создавался для того, \nчтобы сделать web-странички «живыми». \n\nПрограммы на этом языке называются скриптами. \nВ браузере они подключаются напрямую к HTML и, \nкак только загружается страничка – тут же выполняются.", "40px 'aMavickFont'");
 	this.text.lineHeight = 43;
 	this.text.parent = this;
 	this.text.setTransform(110.9,456.5);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_47}]}).to({state:[{t:this.shape_48}]},6).to({state:[{t:this.text}]},6).wait(6));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.shape_47}]},6).to({state:[{t:this.text}]},6).wait(6));
 
 	// внешняя ссылка
 	this.button_6 = new lib.Краснаякнопка();
@@ -818,8 +842,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images_page/ghjghjgh.jpg?1504799163406", id:"ghjghjgh"},
-		{src:"images_page/IMG_3342.jpg?1504799163406", id:"IMG_3342"}
+		{src:"images_page/ghjghjgh.jpg?1504799647314", id:"ghjghjgh"},
+		{src:"images_page/IMG_3342.jpg?1504799647314", id:"IMG_3342"}
 	],
 	preloads: []
 };
